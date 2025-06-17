@@ -116,10 +116,10 @@ const KBCLander = () => {
 
                 {/* Main Content */}
 
-                <div className='text-white flex justify-between min-h-[90vh] items-center px-8'>
+                <div className='text-white flex justify-between min-h-[85vh] items-center px-8'>
 
                     {/* Left Content Section */}
-                    <div className="flex-1 flex flex-col justify-center items-center text-center space-y-8  mt-9 lg:mt-1">
+                    <div className="flex-1 flex flex-col justify-center items-center text-center space-y-8  lg:mt-1">
                         {/* Welcome Section */}
                         <div className="space-y-6">
                             {/* Decorative Elements - Moved to Top */}

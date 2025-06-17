@@ -83,7 +83,7 @@ const ChatBotSidebar = ({ currentQuestion, isOpen, onClose, sendMessage, setIsTi
                 </div>
 
                 {/* Footer - Input Area */}
-                <div className="flex items-center gap-2 border-t border-gray-600 px-3 py-2 mb-3">
+                <div className="flex items-center gap-2 border-t border-gray-600 px-3 py-2 mb-20 md:mb-3">
                     <input
                         type="text"
                         value={userInput}
