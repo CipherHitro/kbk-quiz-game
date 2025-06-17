@@ -1,10 +1,8 @@
 
 const axios = require("axios");
 require("dotenv").config();
-OPENROUTER_API_KEY =
-  "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";
-
 const generateQuestion = async () => {
+  console.log("OpenAI Key : ", process.env.OPENROUTER_API_KEY)
   const prompt =  `You are a quiz master. Generate 16 multiple-choice trivia question in this JSON format:
 
 {
@@ -26,7 +24,7 @@ Choose random topic (like science, sports, tech, history, etc) and vary the amou
       },
       {
         headers: {
-          Authorization: `Bearer ${OPENROUTER_API_KEY}`,
+          Authorization: `Bearer ${process.env.OPENROUTER_API_KEY}`,
           "Content-Type": "application/json",
         },
       }

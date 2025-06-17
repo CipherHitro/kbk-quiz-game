@@ -1,0 +1,8 @@
+{
+  "rewrites": [
+    {
+      "source": "/api/(.*)",
+      "destination": "https://password-manager-backend-lltg.onrender.com/api/$1"
+    }
+  ]
+}

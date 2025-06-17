@@ -12,7 +12,7 @@ const app = express();
 const port = 2001;
 
 const corsOptions = {
-  origin: [process.env.FRONTEND_URL_DEV],
+  origin: process.env.MODE=='development'?process.env.FRONTEND_URL_DEV:process.env.FRONTEND_URL_PRODUCTION,
   credentials: true,              
   methods: ['GET', 'POST', 'PUT', 'DELETE', 'OPTIONS'],
   allowedHeaders: ['Content-Type', 'Authorization']
@@ -24,7 +24,7 @@ app.use(express.json());
 app.use(cookieParser());
 
 //Database connection
-connectMongoDb(process.env.MONGO_URI_DEV)
+connectMongoDb(process.env.MODE=='development'?process.env.MONGO_URI_DEV:process.env.MONGO_URI_PRODUCTION)
   .then(() => console.log("Mongo connected"))
   .catch((err) => console.error(err));
 
