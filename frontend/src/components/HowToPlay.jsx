@@ -137,7 +137,7 @@ const HowToPlay = () => {
 
     const goToHome = () => {
         navigate('/')
-        console.log("Navigate to home page");
+        // console.log("Navigate to home page");
     };
 
     return (

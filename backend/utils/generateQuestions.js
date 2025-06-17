@@ -77,7 +77,7 @@ const flipQuestions = async (id, amount, category) => {
       },
       {
         headers: {
-          Authorization: `Bearer ${OPENROUTER_API_KEY}`,
+          Authorization: `Bearer ${process.env.OPENROUTER_API_KEY}`,
           "Content-Type": "application/json",
         },
       }
@@ -87,7 +87,7 @@ const flipQuestions = async (id, amount, category) => {
 
     // Parse JSON safely
     let question;
-    console.log(jsonText);
+    // console.log(jsonText);
     try {
       question = JSON.parse(jsonText);
       return question;

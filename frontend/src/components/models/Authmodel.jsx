@@ -148,7 +148,7 @@ const AuthModal = ({ isOpen, onClose, mode, onSwitchMode, setAuthMode }) => {
     if (response.ok) {
       if (import.meta.env.VITE_MODE == 'development') {
         Cookies.set('uid', data.token, { expires: 7 })
-        console.log("Logged in")
+        // console.log("Logged in")
         onClose();
         navigate('/')
       }
@@ -185,8 +185,8 @@ const AuthModal = ({ isOpen, onClose, mode, onSwitchMode, setAuthMode }) => {
     }
 
     // Handle form submission here
-    console.log('Form submitted:', formData);
-    console.log('Auth mode:', mode);
+    // console.log('Form submitted:', formData);
+    // console.log('Auth mode:', mode);
 
     if (mode === 'login') {
       handleLogin(formData)

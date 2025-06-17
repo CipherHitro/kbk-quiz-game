@@ -50,7 +50,7 @@ const KBCLander = () => {
     }, [displayText, isTyping, currentTextIndex, typingTexts]);
 
     const handlePlay = async () => {
-        console.log("in handle play")
+        // console.log("in handle play")
         if (!Cookies.get('uid')) {
             alert('You need to login first')
             return
@@ -63,7 +63,7 @@ const KBCLander = () => {
             })
 
             const data = await response.json();
-            console.log(data)
+            // console.log(data)
             setIsGenerating(false); // stop loader
 
             if (response.ok) {

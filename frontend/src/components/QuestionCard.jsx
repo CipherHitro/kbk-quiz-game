@@ -66,7 +66,7 @@ const QuestionCard = () => {
     setIsTimerPaused(false)
   };
   const sendMessage = async (userInput) => {
-    console.log("in send message")
+    // console.log("in send message")
     const response = await fetch(`${base_API_URL}api/chat`, {
       method: "POST",
       body: JSON.stringify({ message: userInput }),
@@ -79,7 +79,7 @@ const QuestionCard = () => {
     return data.reply
   }
   const usePhoneAFriend = () => {
-    console.log("phone a friend")
+    // console.log("phone a friend")
     setIsChatBotOpen(true);
 
   }
@@ -111,7 +111,7 @@ const QuestionCard = () => {
   };
 
   const useFlipQuestion = async (selectedCategory) => {
-    console.log("in flip questons");
+    // console.log("in flip questons");
 
     const questionData = {
       id: currentQuestion.id,
@@ -134,7 +134,7 @@ const QuestionCard = () => {
 
 
       const data = await response.json();
-      console.log(data);
+      // console.log(data);
       if (response.ok) {
         setIsFlipped(true)
         setIsFlipping(false);  // Hide loading overlay
@@ -144,7 +144,7 @@ const QuestionCard = () => {
         }, 1200); // Match flip animation duration
       } else {
         alert(data.message || "Failed to generate new question");
-        setLifelinesUsed({flipQuestion: false})
+        setLifelinesUsed(prev => ({ ...prev, flipQuestion: false }));
         setIsFlipping(false);
       }
     } catch (error) {
@@ -203,7 +203,7 @@ const QuestionCard = () => {
       setIsCheckingAnswer(false); // stop checking
 
       if (answerIndex === currentQuestion.correctAnswer) {
-        console.log("Correct answer ");
+        // console.log("Correct answer ");
 
         if (currentQuestion.id === 16) {
           setGameState('won');
