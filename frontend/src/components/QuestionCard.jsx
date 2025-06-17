@@ -278,9 +278,9 @@ const QuestionCard = () => {
       <div className=" text-white absolute inset-0 -z-10 h-full [background:radial-gradient(125%_125%_at_50%_10%,#000_40%,#63e_100%)]">
       </div>
       <Navbar currentQuestion={currentQuestion} />
-      <div className="flex items-start justify-center pt-15 pb-3 px-2">
+      <div className="flex items-start justify-center pt-5 md:pt-15 pb-3 px-2">
         {/* Main Question Card */}
-        <div className="questionCard border  border-white/20 w-full max-w-4xl  px-6 py-3 rounded-2xl bg-white/5 backdrop-blur-lg shadow-2xl max-h-[85vh] overflow-y-auto">
+        <div className="questionCard border  border-white/20 w-full max-w-4xl px-6 py-3 rounded-2xl bg-white/5 backdrop-blur-lg shadow-2xl max-h-[85vh] overflow-y-auto">
 
           {/* Top Section: Details + Timer */}
           <div className="flex md:flex-row justify-between items-start md:items-center p-4 mb-2">

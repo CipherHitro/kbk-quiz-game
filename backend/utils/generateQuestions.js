@@ -37,7 +37,7 @@ Only return valid JSON. Do not include any explanations or surrounding text.`;
     );
 
     const jsonText = response.data.choices[0].message.content;
-    console.log(jsonText);
+    // console.log(jsonText);
 
     // Parse JSON safely
     let question;
